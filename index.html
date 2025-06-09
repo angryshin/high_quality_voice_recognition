@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고급 음성인식</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🎤 고급 음성인식</h1>
+        <p class="subtitle">AI 기반 실시간 음성 텍스트 변환 시스템</p>
+        <div class="language-select">
+            <select id="languageSelect">
+                <option value="ko-KR">🇰🇷 한국어</option>
+                <option value="en-US">🇺🇸 영어</option>
+                <option value="fr-FR">🇫🇷 프랑스어</option>
+                <option value="de-DE">🇩🇪 독일어</option>
+                <option value="zh-CN">🇨🇳 중국어</option>
+                <option value="th-TH">🇹🇭 태국어</option>
+                <option value="vi-VN">🇻🇳 베트남어</option>
+                <option value="fil-PH">🇵🇭 필리핀어</option>
+                <option value="hi-IN">🇮🇳 힌디어</option>
+            </select>
+        </div>
+        <div class="controls">
+            <button id="startButton" class="mic-button" title="음성인식 시작/중지 (Ctrl+Space)">🎤</button>
+        </div>
+        <div id="status" class="status idle">음성인식 대기 중...</div>
+        <div class="confidence-bar">
+            <div id="confidenceFill" class="confidence-fill"></div>
+        </div>
+        <div class="result-area">
+            <textarea id="resultText" class="result-text">여기에 인식된 텍스트가 실시간으로 표시됩니다.</textarea>
+        </div>
+        <div class="controls">
+            <button id="clearButton" class="action-button clear-button">🗑️ 지우기</button>
+            <button id="copyButton" class="action-button copy-button">📋 복사</button>
+            <button id="saveButton" class="action-button save-button">💾 저장</button>
+        </div>
+        <div class="font-size-controls">
+            <button id="decreaseFontSize" class="font-size-button" title="글자 크기 줄이기">A-</button>
+            <div id="fontSizeDisplay" class="font-size-display">100%</div>
+            <button id="increaseFontSize" class="font-size-button" title="글자 크기 키우기">A+</button>
+        </div>
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+        <div class="footer">
+            <span class="hospital">Gangdong Sacred Heart Hospital</span>
+            <span class="credit">made by SDH</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
